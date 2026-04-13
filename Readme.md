@@ -12,7 +12,7 @@
 
 ## 🎬 Output Preview
 
-https://github.com/ali-saad44/smart-city-speed-detection-and-speed-estimation-for-cars-on-roads/issues/1#issue-4257599019
+
 
 > Upload a road video → system processes it → download the annotated output
 
