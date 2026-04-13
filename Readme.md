@@ -12,6 +12,8 @@
 
 ## 🎬 Output Preview
 
+https://github.com/ali-saad44/smart-city-speed-detection-and-speed-estimation-for-cars-on-roads/issues/1#issue-4257599019
+
 > Upload a road video → system processes it → download the annotated output
 
 | Vehicle within limit | Vehicle speeding |
@@ -84,41 +86,6 @@ smoothed_speed = 0.6 × previous_speed + 0.4 × new_speed
 
 ---
 
-## 🚀 How to Run on Kaggle
-
-### Step 1 — Create Notebook
-1. Go to [kaggle.com](https://kaggle.com) → **Create** → **New Notebook**
-2. Right panel → **Session options** → **Accelerator = GPU T4 x2**
-
-### Step 2 — Upload Your Video
-1. Right panel → **Add Data** → **Upload** → select your `.mp4` video
-2. Note the path: `/kaggle/input/your-dataset/your-video.mp4`
-
-### Step 3 — Install Dependencies
-Run this as **Cell 1**:
-```python
-!pip install ultralytics deep-sort-realtime opencv-python-headless -q
-```
-
-### Step 4 — Configure
-In **Cell 3**, set:
-```python
-SPEED_LIMIT_KMH = 60                                    # your speed limit
-INPUT_VIDEO     = "/kaggle/input/your-dataset/video.mp4"  # your video path
-OUTPUT_VIDEO    = "/kaggle/working/output_speed.mp4"      # output path
-```
-
-### Step 5 — Run All Cells (1 → 9)
-- **Cell 8** runs the full video processing (takes a few minutes)
-- **Cell 9** shows a video preview + auto-downloads the result
-
-### Step 6 — Get Your Output
-- ▶️ Video plays **inline** inside the notebook
-- ⬇️ Download auto-triggers after **2 seconds**
-- 📂 Also available in **right panel → Output tab**
-
----
-
 ## 📁 Project Structure
 
 ```
@@ -164,27 +131,3 @@ pip install ultralytics deep-sort-realtime opencv-python-headless numpy fastapi 
 - Good lighting and clear visibility improves YOLOv8 detection accuracy
 
 ---
-
-## 🗺️ Roadmap
-
-- [x] Kaggle demo script — speed detection + output video
-- [x] Auto pixel scale calibration
-- [x] Red/green bounding boxes by speed
-- [x] Auto-download output video
-- [ ] FastAPI backend for web video upload
-- [ ] Web frontend UI with progress bar and live preview
-- [ ] License plate OCR on violations
-- [ ] Violation log export (CSV / PDF)
-- [ ] Live CCTV stream support (RTSP)
-- [ ] Dashboard with violation history and heatmaps
-
----
-
-## 📄 License
-
-MIT License — free to use, modify, and distribute.
-
----
-
-> Built with ❤️ using YOLOv8 + DeepSORT + OpenCV + FastAPI
-> Part of the **Smart City Management System** project
